@@ -25,7 +25,7 @@ true //si es profesional
     "score": '70.7',
     "hours": 14,
     "profesional": true
-    "Friends: true"
+
 }
 
 
