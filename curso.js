@@ -101,3 +101,24 @@ console.log("Modelo:", coche["modelo"]); //imprime el modelo del coche
 coche.color = "Rojo"; //agrega una nueva clave color con valor Rojo
 console.log("Coche completo:", coche); //imprime el objeto coche completo
 
+//JSON y fetch
+let producto = { //definimos un objeto producto
+    nombre: "Laptop", //nombre del producto
+    precio: 15000 //precio del producto
+};
+
+//JSON
+let productoJSON = JSON.stringify(producto); //convierte el objeto producto a JSON
+console.log("JSON:", productoJSON); //imprime el JSON
+
+//objeto de json
+let nuevoProducto = JSON.parse(productoJSON); //convierte el JSON de nuevo a objeto
+console.log("Objeto:", nuevoProducto); //imprime el objeto
+
+//fetch
+fetch("https://jsonplaceholder.typicode.com/users/2") //hacemos una peticion a una API
+    .then(res => res.json()) //convertimos la respuesta a JSON
+    .then(data => { //imprimimos los datos
+        console.log("Datos de usuario:", data); //imprime los datos del usuario
+    })
+    .catch(err => console.error("Error:", err)); //manejo de errores 
