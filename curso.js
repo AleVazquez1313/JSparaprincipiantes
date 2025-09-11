@@ -28,5 +28,21 @@ true //si es profesional
     "profesional": true
 
 }
+//Operadores
+let x = 15;
+let y = 6;
+
+console.log("Suma:", x + y);
+console.log("Resta:", x - y);
+console.log("Producto:", x * y);
+console.log("Cociente:", x / y);
+console.log("Residuo:", x % y);
+
+console.log("x > y:", x > y);
+console.log("x === y:", x === y);
+
+console.log("x > 10 && y < 10:", x > 10 && y < 10);
+console.log("x < 10 || y === 6:", x < 10 || y === 6);
+
 
 
