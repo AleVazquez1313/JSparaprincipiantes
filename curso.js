@@ -32,17 +32,27 @@ true //si es profesional
 let x = 15;
 let y = 6;
 
-console.log("Suma:", x + y);
-console.log("Resta:", x - y);
-console.log("Producto:", x * y);
-console.log("Cociente:", x / y);
-console.log("Residuo:", x % y);
+console.log("Suma:", x + y); //suma
+console.log("Resta:", x - y);//resta
+console.log("Producto:", x * y); //multiplicacion
+console.log("Cociente:", x / y); //division
+console.log("Residuo:", x % y); //residuo
 
-console.log("x > y:", x > y);
-console.log("x === y:", x === y);
+console.log("x > y:", x > y); //mayor que
+console.log("x === y:", x === y); //igualdad estricta
 
-console.log("x > 10 && y < 10:", x > 10 && y < 10);
-console.log("x < 10 || y === 6:", x < 10 || y === 6);
+console.log("x > 10 && y < 10:", x > 10 && y < 10); //AND
+console.log("x < 10 || y === 6:", x < 10 || y === 6); //OR
 
+//Condicionales if
+let nota = 65; //definimos una variable nota
+
+if (nota >= 90) {  //si la nota es mayor o igual a 90
+    console.log("Sobresaliente"); //imprime sobresaliente
+} else if (nota >= 70) { //si la nota es mayor o igual a 70
+    console.log("Aprobado"); //imprime aprobado
+} else { // si no
+    console.log("Reprobado"); //imprime reprobado
+}
 
 
