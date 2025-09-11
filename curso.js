@@ -122,3 +122,4 @@ fetch("https://jsonplaceholder.typicode.com/users/2") //hacemos una peticion a u
         console.log("Datos de usuario:", data); //imprime los datos del usuario
     })
     .catch(err => console.error("Error:", err)); //manejo de errores 
+
