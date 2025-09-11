@@ -1,4 +1,3 @@
-@ -1,32 +1,5 @@
 //Vamos a hacer unas cuantas cosas vistas en el video 
 
 //Tipos de datos
@@ -54,5 +53,6 @@ if (nota >= 90) {  //si la nota es mayor o igual a 90
 } else { // si no
     console.log("Reprobado"); //imprime reprobado
 }
+
 
 
