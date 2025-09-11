@@ -54,5 +54,30 @@ if (nota >= 90) {  //si la nota es mayor o igual a 90
     console.log("Reprobado"); //imprime reprobado
 }
 
+//Bucle con for 
+for (let i = 0; i < 4; i++) { //inicia en 0, mientras i sea menor que 4, incrementa i en 1
+    console.log("Iteración:", i); //imprime la iteracion
+}
+
+// Bucle con while
+let contador = 3; //inicia en 3
+while (contador > 0) { //mientras contador sea mayor que 0
+    console.log("Cuenta regresiva:", contador); //imprime la cuenta regresiva
+    contador--; //decrementa contador en 1
+}
+
+let animales = ["Perro", "Gato", "Loro"]; //array de animales
+for (let animal of animales) { //para cada animal en animales
+    console.log("Animal:", animal); //imprime el animal
+}
+ //funciones
+function despedir(nombre) { //definimos una funcion llamada despedir que recibe un parametro nombre
+    return "Adiós " + nombre; //retorna adios y el nombre
+}
+console.log(despedir("Vanecha")); //llamamos a la funcion despedir con el parametro Vanecha
+
+const dividir = (a, b) => a / b; //funcion flecha que divide a entre b
+console.log("12 / 3 =", dividir(12, 3)); //llamamos a la funcion dividir con los parametros 12 y 3
+
 
 
