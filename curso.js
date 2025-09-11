@@ -79,5 +79,13 @@ console.log(despedir("Vanecha")); //llamamos a la funcion despedir con el parame
 const dividir = (a, b) => a / b; //funcion flecha que divide a entre b
 console.log("12 / 3 =", dividir(12, 3)); //llamamos a la funcion dividir con los parametros 12 y 3
 
+// Array (Listas)
+let comidas = ["Pizza", "Tacos", "Hamburguesa"]; //definimos un array de comidas
+console.log("Primera comida:", comidas[0]); //imprime la primera comida
+for (let i = 0; i < comidas.length; i++) { //bucle for que recorre el array de comidas
+    console.log("Ítem:", comidas[i]); //imprime cada comida
+}
+comidas.push("Sushi"); //agrega sushi al final del array
+console.log("Comidas:", comidas); //imprime el array de comidas
 
 
