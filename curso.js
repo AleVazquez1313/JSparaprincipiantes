@@ -88,4 +88,16 @@ for (let i = 0; i < comidas.length; i++) { //bucle for que recorre el array de c
 comidas.push("Sushi"); //agrega sushi al final del array
 console.log("Comidas:", comidas); //imprime el array de comidas
 
+//Objetos
+let coche = { //definimos un objeto coche
+    marca: "Toyota", //clave marca con valor Toyota
+    modelo: "Corolla", //clave modelo con valor Corolla
+    anio: 2020 //Este es su ano 
+};
+
+console.log("Marca:", coche.marca); //imprime la marca del coche
+console.log("Modelo:", coche["modelo"]); //imprime el modelo del coche
+
+coche.color = "Rojo"; //agrega una nueva clave color con valor Rojo
+console.log("Coche completo:", coche); //imprime el objeto coche completo
 
