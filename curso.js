@@ -115,11 +115,5 @@ console.log("JSON:", productoJSON); //imprime el JSON
 let nuevoProducto = JSON.parse(productoJSON); //convierte el JSON de nuevo a objeto
 console.log("Objeto:", nuevoProducto); //imprime el objeto
 
-//fetch
-fetch("https://jsonplaceholder.typicode.com/users/2") //hacemos una peticion a una API
-    .then(res => res.json()) //convertimos la respuesta a JSON
-    .then(data => { //imprimimos los datos
-        console.log("Datos de usuario:", data); //imprime los datos del usuario
-    })
-    .catch(err => console.error("Error:", err)); //manejo de errores 
+
 
