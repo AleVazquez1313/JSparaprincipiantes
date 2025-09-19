@@ -1,1 +1,4 @@
-PracticaDos.js
+function cuadrado(numero) {
+    return numero * numero;
+
+}
