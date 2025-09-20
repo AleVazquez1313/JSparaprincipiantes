@@ -4,6 +4,9 @@ const persona = {
     direccion: {
     ciudad: "Qro",
     pais: "Mexico"
-
     }
-};
+    
+   const { nombre, edad, ciudad } = persona;
+    console.log(nombre); // "Vanesa Alejandra"
+    console.log(edad); // 19
+    console.log(ciudad); // "Qro"
