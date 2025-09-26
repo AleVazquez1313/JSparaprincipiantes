@@ -11,7 +11,7 @@ async function obtenerDatos () {
     console.log('Cargando...');
     const datos = await simularPeticionAPI();
     console.log(datos);
-    console.log('Petición finalizada.');
+    console.log('Petición finalizadaa.');
 }
 
 obtenerDatos();
