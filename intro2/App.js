@@ -15,11 +15,12 @@ let[contador,setContador] = useState(0);
       <Text style={styles.texto2}> {contador} </Text>  
 
       <View style={styles.contenedorBotones}>
-      <Button title = "Incrementar" onPress={()=> setContador(contador+1)} />
 
-      <Button title = "Quitar" onPress={()=> setContador(contador-1)} />
+      <Button color="green" title = "Incrementar" onPress={()=> setContador(contador+1)} />
 
-      <Button title = "Reiniciar" onPress={()=> setContador(0)} />
+      <Button color="orange" title = "Quitar" onPress={()=> setContador(contador-1)} />
+
+      <Button color="Brown" title = "Reiniciar" onPress={()=> setContador(0)} />
       </View>
 
       <StatusBar style="auto" />
@@ -52,8 +53,9 @@ const styles = StyleSheet.create({
     textDecorationLine:'underline'
   },
   contenedorBotones:{
-    marginTop: 15,
-    flexDirection:'row-reverse'
+    marginTop: 15, //Margen de espacio
+    flexDirection:'row-reverse', //Direccion de los botones
+    gap:20,
   },
   
 
