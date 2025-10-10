@@ -3,7 +3,7 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Button } from 'react-native';
 import React,{ useState } from 'react';
 
-//2. Main: Zona de componentes
+//2. Main: Zona de componentess
 export default function App() {
 
 let[contador,setContador] = useState(0);
