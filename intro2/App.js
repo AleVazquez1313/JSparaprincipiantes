@@ -43,6 +43,13 @@ const styles = StyleSheet.create({
     fontStyle:'italic',
     textDecorationLine:'line-through'
   },
+    texto2:{
+    color: '#00ff77ff' , //Cambiando el color del texto 
+    fontSize:40,
+    fontFamily:'Courier', //Estilo de fuente
+    fontWeight:'400',
+    textDecorationLine:'underline'
+  },
   
 
 });
