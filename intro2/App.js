@@ -29,7 +29,7 @@ let[contador,setContador] = useState(0);
 const styles = StyleSheet.create({
   container: {
     flex: 1, //Definir sus espacios
-    backgroundColor: '#e30000ff', //color del fondo
+    backgroundColor: '#ffffffff', //color del fondo
     alignItems: 'center', //posicion de los elementos en posicion x (star, end, center)
     justifyContent: 'center', //posicion de los elementos en posicion y (star, end, center)
   },
