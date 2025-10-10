@@ -33,4 +33,5 @@ const styles = StyleSheet.create({
     alignItems: 'center', //posicion de los elementos en posicion x (star, end, center)
     justifyContent: 'center', //posicion de los elementos en posicion y (star, end, center)
   },
+  texto:{},
 });
