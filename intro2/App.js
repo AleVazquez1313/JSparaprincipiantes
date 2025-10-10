@@ -34,7 +34,13 @@ const styles = StyleSheet.create({
     justifyContent: 'center', //posicion de los elementos en posicion y (star, end, center)
   },
   texto:{
-    color: '#e30000ff' ,
+    color: '#e30000ff' , //Cambiando el color del texto 
     fontSize:30,
+    fontFamily:'Times New Roman', //Estilo de fuente
+    fontWeight:'bold',
+    fontStyle:'italic',
+    textDecorationLine:'line-through'
   },
+  
+
 });
