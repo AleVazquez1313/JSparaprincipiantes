@@ -28,9 +28,9 @@ let[contador,setContador] = useState(0);
 //3. Estilos: Zona de estetica y posicionamiento
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#ffffffff',
-    alignItems: 'center',
+    flex: 1, //Definir sus espacios
+    backgroundColor: '#e30000ff', //color del fondo
+    alignItems: 'center', //posicion 
     justifyContent: 'center',
   },
 });
