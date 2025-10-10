@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1, //Definir sus espacios
     backgroundColor: '#e30000ff', //color del fondo
-    alignItems: 'start', //posicion de los elementos en posicion x (star, end, center)
-    justifyContent: 'start', //posicion de los elementos en posicion y (star, end, center)
+    alignItems: 'center', //posicion de los elementos en posicion x (star, end, center)
+    justifyContent: 'center', //posicion de los elementos en posicion y (star, end, center)
   },
 });
