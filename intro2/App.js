@@ -11,15 +11,16 @@ let[contador,setContador] = useState(0);
   return (
     <View style={styles.container}>
 
-      <Text style={styles.texto}>Contador:</Text>
-      <Text style={styles.texto2}> {contador} </Text>
+      <Text style={styles.texto}>Contador:</Text>      
+      <Text style={styles.texto2}> {contador} </Text>  
 
+      <View style={styles.contenedorBotones}>
       <Button title = "Incrementar" onPress={()=> setContador(contador+1)} />
 
       <Button title = "Quitar" onPress={()=> setContador(contador-1)} />
 
       <Button title = "Reiniciar" onPress={()=> setContador(0)} />
-
+      </View>
 
       <StatusBar style="auto" />
     
@@ -49,6 +50,10 @@ const styles = StyleSheet.create({
     fontFamily:'Courier', //Estilo de fuente
     fontWeight:'400',
     textDecorationLine:'underline'
+  },
+  contenedorBotones:{
+    marginTop: 15,
+    flexDirection:'row-reverse'
   },
   
 
