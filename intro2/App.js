@@ -20,7 +20,7 @@ let[contador,setContador] = useState(0);
 
       <Button color="orange" title = "Quitar" onPress={()=> setContador(contador-1)} />
 
-      <Button color="Brown" title = "Reiniciar" onPress={()=> setContador(0)} />
+      <Button color="Pink" title = "Reiniciar" onPress={()=> setContador(0)} />
       </View>
 
       <StatusBar style="auto" />
