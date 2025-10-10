@@ -12,7 +12,7 @@ let[contador,setContador] = useState(0);
     <View style={styles.container}>
 
       <Text style={styles.texto}>Contador:</Text>
-      <Text style={styles.texto}> {contador} </Text>
+      <Text style={styles.texto2}> {contador} </Text>
 
       <Button title = "Incrementar" onPress={()=> setContador(contador+1)} />
 
