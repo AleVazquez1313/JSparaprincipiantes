@@ -12,13 +12,22 @@ export default function SwitchButton({temporal, isButton}) {
         }).start();
     }, [value]);
     const animatedStyles = {
-        transform: [
+        transform:[
             {
                 translateX: toggle.interpolate({
                     inputRange: [0, 1],
                     outputRange: [2.5, 2.4],
                     extrapolate: 'clamp',
-                }),
+                })
             }
+        ]
     }
+    return(
+        <View style={StyleSheet.container}>
+            isButton ? (
+                <Pressable onPress={() => setValue(!value)}>
+                    <View style={[styles.button, {backgroundColor: value ? '#ff0084ff' : '#dcdde1'}]}>
+                        <Animated.View style={[styles.circle, animatedStyles]} />
+                        </View>
+                        </Pressable>
 }

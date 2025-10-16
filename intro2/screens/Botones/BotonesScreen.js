@@ -71,18 +71,7 @@ export default function BotonesScreen() {
     </View>
   )
 }
-return (
- <View style={styles.container}> 
-    <View style={styles.Encabezado}>
-      <Text style={styles.EncabezadoTitle}> Configuración </Text>
-</View>
-    <View style={styles.footer}>
-      {
-        info.map(x=>
-            <Item key={x.id} title={x.title} value={x.value}/>
-            )
-}
-</View>
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,                 // ocupa toda la pantalla
