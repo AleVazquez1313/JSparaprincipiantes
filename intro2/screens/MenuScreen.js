@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Text, StyleSheet, View } from 'react-native'
 import ContadorScreen from './ContadorScreen';
 import BotonesScreen from './BotonesScreen';
-import ButtonsSwitchScreen from './Switch';
+import Switch from './Switch';
 import TextImputAlertScreen from './TextImputAlertScreen';
 import ImageBackgroungSlapshScreen from './ImageBackgroungSlapshScreen';
 import ScrollViewScreen from './ScrollViewScreen';
