@@ -1,5 +1,5 @@
 import { Text, StyleSheet, View } from 'react-native'
-import SwitchButton from './SwitchScreen'
+import SwitchButton from './Swich'
 // Importamos nuestro componente SwitchButton para usarlo en cada opción de configuración
 
 export default function BotonesScreen() {

@@ -52,7 +52,7 @@ export default function SwitchButton({ temporal, isButton }) {
         // Si es interactivo, usamos Pressable para detectar clicks/taps
         <Pressable onPress={() => setValue(!value)}>
           {/* Contenedor del switch */}
-          <View style={[styles.button, { backgroundColor: value ? '#00ff51ff' : '#ff0000ff' }]}>
+          <View style={[styles.button, { backgroundColor: value ? '#14949c' : '#adadad' }]}>
             {/* Círculo blanco que se mueve */}
             <Animated.View style={[styles.circle, animatedStyles]} />
             {/* Texto "ON"/"OFF" dentro del switch */}
