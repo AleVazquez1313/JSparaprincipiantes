@@ -1,8 +1,8 @@
 import React from 'react';
-import MenuScreen from './screens/Botones/MenuScreen';
+import BotonesScreen from './screens/Botones/BotonesScreen.js';
 
 export default function App() {
-  return <MenuScreen />;
+  return <BotonesScreen />;
 }
 //El archivo es para levantar la aplicacion
 
