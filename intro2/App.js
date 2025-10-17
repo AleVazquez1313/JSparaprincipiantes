@@ -1,13 +1,9 @@
-//1. Import: Zona de declaraciones
-import ContadorScreen from './screens/ContadorScreen';
+import React from 'react';
+import MenuScreen from './screens/Botones/MenuScreen';
 
-//2. Main: Zona de componentess
 export default function App() {
-
-
-  return (
-    <ContadorScreen></ContadorScreen>
- 
-  );
+  return <MenuScreen />;
 }
 //El archivo es para levantar la aplicacion
+
+
