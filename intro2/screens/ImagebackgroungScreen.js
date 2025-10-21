@@ -13,7 +13,7 @@ SplashScreen.preventAutoHideAsync();
 
 const { height } = Dimensions.get("window");
 
-export default function ImagebackgroungScreen () {
+export default function SplashScreenPro() {
   const [showMain, setShowMain] = useState(false); // controla la pantalla principal
 
   // Animaciones Splash
@@ -74,7 +74,7 @@ export default function ImagebackgroungScreen () {
   if (showMain) {
     return (
       <ImageBackground
-        source={require("../assets/favicon.png")}
+        source={require("https://motionbgs.com/media/2442/yor-forger-spy-x-family.jpg")}
         style={styles.background}
         resizeMode="cover" // 'cover' hace que la imagen llene toda la pantalla
       >
@@ -89,7 +89,7 @@ export default function ImagebackgroungScreen () {
   return (
     <Animated.View style={[styles.container, { opacity: fadeOut }]}>
       <Animated.Image
-        source={require("../assets/icon.png")}
+        source={require("https://pnganime.com/web/image-thumbnails/48/537-lg.png")}
         resizeMode="contain"
         style={[
           styles.logoImage,
