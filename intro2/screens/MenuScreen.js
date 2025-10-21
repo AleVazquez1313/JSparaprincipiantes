@@ -1,7 +1,7 @@
 import { Text, StyleSheet, View, Button } from 'react-native';
 import React, { useState } from 'react';
 import ContadorScreen from './ContadorScreen';
-import BotonesScreen from './Botones/BotonesScreen';
+import BotonesScreen from './BotonesScreen';
 import TextImputScreen from './TextImputScreen';
 import ImagebackgroungScreen from './ImagebackgroungScreen';
 import ScrollViewScreen from './ScrollViewScreen';
@@ -38,15 +38,15 @@ export default function MenuScreen() {
                     <View style={styles.container}>
                       <Text style={styles.texto}>Menú de Practicas</Text>
                       <View style={styles.botones}>
-                      <Button color={'blue'} onPress={()=>setScreen('contador')} title='Pract:Contador'/>
-                      <Button color={'purple'} onPress={()=>setScreen('botones')} title='Pract:Botobes'/>
-                      <Button color={'black'} onPress={()=>setScreen('textimput')} title='Pract:TextImput&Alert'/>
-                      <Button color={'red'} onPress={()=>setScreen('imagebackgroung')} title='Pract:ImageBackgroung&SlashScreen'/>
-                      <Button color={'green'} onPress={()=>setScreen('scrollview')} title='Pract:ScrollView'/>
-                      <Button color={'orange'} onPress={()=>setScreen('activityindicator')} title='Pract:ActivityIndicator'/>
-                      <Button color={'blue'} onPress={()=>setScreen('flatlist')} title='Pract:FlatList'/>
+                      <Button color={'pink'} onPress={()=>setScreen('contador')} title='Pract:Contador'/>
+                      <Button color={'purple'} onPress={()=>setScreen('botones')} title='Pract:Botones'/>
+                      <Button color={'pink'} onPress={()=>setScreen('textimput')} title='Pract:TextImput&Alert'/>
+                      <Button color={'purple'} onPress={()=>setScreen('imagebackgroung')} title='Pract:ImageBackgroung&SlashScreen'/>
+                      <Button color={'pink'} onPress={()=>setScreen('scrollview')} title='Pract:ScrollView'/>
+                      <Button color={'purple'} onPress={()=>setScreen('activityindicator')} title='Pract:ActivityIndicator'/>
+                      <Button color={'pink'} onPress={()=>setScreen('flatlist')} title='Pract:FlatList'/>
                       <Button color={'purple'} onPress={()=>setScreen('modalscreen')} title='Pract:Modal'/>
-                      <Button color={'red'} onPress={()=>setScreen('bottomsheet')} title='Pract:BottonSheet'/>
+                      <Button color={'pink'} onPress={()=>setScreen('bottomsheet')} title='Pract:BottonSheet'/>
                         </View>
                     </View>
                   )    
@@ -75,7 +75,7 @@ const styles = StyleSheet.create({
     },
     container: {
         flex: 1,
-        backgroundColor: 'rgba(37, 92, 126, 0.24)',
+        backgroundColor: 'rgba(239, 178, 229, 1)', //fondo
         alignItems: 'center',
         justifyContent: 'center',
       },

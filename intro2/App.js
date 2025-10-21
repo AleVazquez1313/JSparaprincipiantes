@@ -1,9 +1,12 @@
-import React from 'react';
-import BotonesScreen from './screens/Botones/BotonesScreen.js';
-
+import ContadorScreen from './screens/ContadorScreen';
+import MenuScreen from './screens/MenuScreen';
 export default function App() {
-  return <BotonesScreen />;
+  return (
+    
+    <MenuScreen> </MenuScreen>
+    
+
+  );
 }
-//El archivo es para levantar la aplicacion
 
 

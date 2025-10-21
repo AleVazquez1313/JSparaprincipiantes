@@ -1,14 +1,19 @@
 import React, { useEffect, useRef, useState } from "react";
-import { View, Text, Animated, StyleSheet, Dimensions } from "react-native";
+import {
+  View,
+  Text,
+  Animated,
+  StyleSheet,
+  Dimensions,
+  ImageBackground,
+} from "react-native";
 import * as SplashScreen from "expo-splash-screen";
-import { Button } from "react-native-web";
-import { ImageBackground } from "react-native";
 
 SplashScreen.preventAutoHideAsync();
 
-const { width, height } = Dimensions.get("window");
+const { height } = Dimensions.get("window");
 
-export default function SplashScreenPro() {
+export default function ImagebackgroungScreen () {
   const [showMain, setShowMain] = useState(false); // controla la pantalla principal
 
   // Animaciones Splash
@@ -17,7 +22,6 @@ export default function SplashScreenPro() {
   const rotateLogo = useRef(new Animated.Value(0)).current;
   const slideText = useRef(new Animated.Value(height / 2)).current;
   const fadeOut = useRef(new Animated.Value(1)).current;
-  
 
   useEffect(() => {
     // Animación inicial del logo: fade + scale + rotación
@@ -69,27 +73,23 @@ export default function SplashScreenPro() {
 
   if (showMain) {
     return (
-    <ImageBackground
-      source={require("../assets/fondo3.png")}
-      style={styles.background}
-      resizeMode='cover' // 'cover' hace que la imagen llene toda la pantalla
-    >
-      <View style={styles.content}>
-        <Text style={styles.text}>¡Bienvenido!</Text>
-
-        
-        
-      </View>
-    </ImageBackground>
-  );
-}
-
+      <ImageBackground
+        source={require("../assets/favicon.png")}
+        style={styles.background}
+        resizeMode="cover" // 'cover' hace que la imagen llene toda la pantalla
+      >
+        <View style={styles.content}>
+          <Text style={styles.text}>¡Bienvenido!</Text>
+        </View>
+      </ImageBackground>
+    );
+  }
 
   // Splash animado
   return (
     <Animated.View style={[styles.container, { opacity: fadeOut }]}>
       <Animated.Image
-        source={require("../assets/icono.jpg")}
+        source={require("../assets/icon.png")}
         resizeMode="contain"
         style={[
           styles.logoImage,
@@ -131,12 +131,6 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
-  text: {
-    fontSize: 40,
-    fontWeight: "bold",
-    color: "#fff",
-    marginBottom: 30,
-  },
   loader: {
     width: 60,
     height: 6,
@@ -148,33 +142,22 @@ const styles = StyleSheet.create({
     height: 300,
     marginBottom: 5,
   },
-  mainContainer: {
-    flex: 1,
-    backgroundColor: "#fff",
+  background: {
+    flex: 1, // ocupa toda la pantalla
+    width: "100%", // ancho completo
+    height: "100%", // alto completo
     justifyContent: "center",
     alignItems: "center",
   },
-  mainText: {
-    fontSize: 32,
-    fontWeight: "bold",
-    color: "#007bffff",
-  },
-  background: {
-    flex: 1,               // ocupa toda la pantalla
-    width: '100%',         // ancho completo
-    height: '100%',        // alto completo
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
   content: {
-    backgroundColor: 'rgba(0, 0, 0, 0.5)', 
+    backgroundColor: "rgba(0, 0, 0, 0.5)",
     padding: 20,
     borderRadius: 10,
   },
   text: {
-    color: 'white',
+    color: "white",
     fontSize: 24,
     marginBottom: 10,
-    textAlign: 'center',
-  }
+    textAlign: "center",
+  },
 });

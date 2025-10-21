@@ -14,7 +14,7 @@ export default function App() {
       <Text style={styles.texto}>Contador:</Text>
       <Text style={styles.texto2}> {contador} </Text>
       <View style={styles.contenedorBotones}>
-      <Button color='blue' title='Incrementar'onPress={()=>setContador(contador+1)}/>
+      <Button color='orange' title='Incrementar'onPress={()=>setContador(contador+1)}/>
         <Button color='red' title='Quitar' onPress={()=>setContador(contador-1)}/>
           <Button color='green' title='Reiniciar' onPress={()=>setContador(0)}/>
             <Button color='purple' title='Dividir' onPress={()=> setContador(contador/2)}/>
@@ -28,12 +28,12 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'rgba(255, 255, 255, 0.26)',
+    backgroundColor: 'rgba(0, 0, 0, 1)', //fondo
     alignItems: 'center',
     justifyContent: 'center',
   },
   texto:{
-    color:'rgb(207, 18, 18)',
+    color:'rgba(255, 251, 0, 1)',
     fontSize:30,
     fontFamily:'Times New Roman',
     fontWeight:'900',
@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
     textDecorationLine:'underline',
   },
   texto2:{
-    color:'rgb(34, 2, 178)',
+    color:'rgba(255, 0, 0, 1)',
     fontSize:40,
     fontFamily:'Courier',
     fontWeight:'700',
