@@ -74,7 +74,7 @@ export default function SplashScreenPro() {
   if (showMain) {
     return (
       <ImageBackground
-        source={require("../assets/images(2).jpeg")}
+        source={require("../assets/yor-forger-spy-x-family.jpg")}
         style={styles.background}
         resizeMode="cover" // 'cover' hace que la imagen llene toda la pantalla
       >
@@ -89,7 +89,7 @@ export default function SplashScreenPro() {
   return (
     <Animated.View style={[styles.container, { opacity: fadeOut }]}>
       <Animated.Image
-        source={require("../assets/yor-forger-spy-x-family.jpg")}
+        source={require("../assets/Portrait.webp")}
         resizeMode="contain"
         style={[
           styles.logoImage,
