@@ -3,12 +3,12 @@ import React, { useState } from 'react';
 import ContadorScreen from './ContadorScreen';
 import BotonesScreen from './BotonesScreen';
 import TextImputScreen from './TextImputScreen';
-import ImagebackgroungScreen from './ImagebackgroungScreen';
+import SplashScreenPro from './ImagebackgroungScreen';
 import ScrollViewScreen from './ScrollViewScreen';
 import ActivityIndicatorScreen from './ActivityIndicatorScreen';
 import FlatListScreen from './FlatListScreen';
 import ModalScreen from './ModalScreen';
-import BottonSheetScreen from './BottonSheetScreen';
+import BottonSheetScreen from './BotonesScreen';
 
 export default function MenuScreen() {
     const [screen, setScreen]= useState('menu');
@@ -21,7 +21,7 @@ export default function MenuScreen() {
         case  'textimput':
             return <TextImputScreen/>; 
         case 'imagebackgroung':
-            return <ImagebackgroungScreen/>;  
+            return <SplashScreenPro/>;  
         case 'scrollview':
             return <ScrollViewScreen/>;
         case 'activityindicator':
@@ -75,7 +75,7 @@ const styles = StyleSheet.create({
     },
     container: {
         flex: 1,
-        backgroundColor: 'rgba(239, 178, 229, 1)', //fondo
+        backgroundColor: 'rgba(0, 0, 0, 1)', //fondo
         alignItems: 'center',
         justifyContent: 'center',
       },

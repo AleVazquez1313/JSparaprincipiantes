@@ -74,7 +74,7 @@ export default function SplashScreenPro() {
   if (showMain) {
     return (
       <ImageBackground
-        source={require("https://motionbgs.com/media/2442/yor-forger-spy-x-family.jpg")}
+        source={require("../assets/images(2).jpeg")}
         style={styles.background}
         resizeMode="cover" // 'cover' hace que la imagen llene toda la pantalla
       >
@@ -89,7 +89,7 @@ export default function SplashScreenPro() {
   return (
     <Animated.View style={[styles.container, { opacity: fadeOut }]}>
       <Animated.Image
-        source={require("https://pnganime.com/web/image-thumbnails/48/537-lg.png")}
+        source={require("../assets/yor-forger-spy-x-family.jpg")}
         resizeMode="contain"
         style={[
           styles.logoImage,
