@@ -7,7 +7,7 @@ import {
   Dimensions,
   ImageBackground,
 } from "react-native";
-import * as SplashScreen from "expo-splash-screen";
+import * as SplashScreen from "expo-splash-screen"; 
 
 SplashScreen.preventAutoHideAsync();
 

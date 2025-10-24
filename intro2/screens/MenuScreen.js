@@ -1,4 +1,4 @@
-import { Text, StyleSheet, View, Button } from 'react-native';
+import { Text, StyleSheet, View, Button, ScrollView } from 'react-native';
 import React, { useState } from 'react';
 import ContadorScreen from './ContadorScreen';
 import BotonesScreen from './BotonesScreen';
@@ -9,82 +9,85 @@ import ActivityIndicatorScreen from './ActivityIndicatorScreen';
 import FlatListScreen from './FlatListScreen';
 import ModalScreen from './ModalScreen';
 import BottonSheetScreen from './BotonesScreen';
+import RepasoScreen from './RepasoScreen'; 
 
 export default function MenuScreen() {
-    const [screen, setScreen]= useState('menu');
+    const [screen, setScreen] = useState('menu');
 
     switch(screen){
-        case 'contador':
-            return <ContadorScreen/>;
-        case 'botones':
-            return <BotonesScreen/>;
-        case  'textimput':
-            return <TextImputScreen/>; 
-        case 'imagebackgroung':
-            return <SplashScreenPro/>;  
-        case 'scrollview':
-            return <ScrollViewScreen/>;
-        case 'activityindicator':
-            return <ActivityIndicatorScreen/>;  
-        case 'flatlist':
-            return <FlatListScreen/>;    
-        case 'modalscreen':
-            return <ModalScreen/>;   
-        case 'bottomsheet':
-            return <BottonSheetScreen/>;     
+        case 'contador': return <ContadorScreen/>;
+        case 'botones': return <BotonesScreen/>;
+        case 'textimput': return <TextImputScreen/>; 
+        case 'imagebackgroung': return <SplashScreenPro/>;  
+        case 'scrollview': return <ScrollViewScreen/>;
+        case 'activityindicator': return <ActivityIndicatorScreen/>;  
+        case 'flatlist': return <FlatListScreen/>;    
+        case 'modalscreen': return <ModalScreen/>;   
+        case 'bottomsheet': return <BottonSheetScreen/>;     
+        case 'repaso': return <RepasoScreen/>; 
         case 'menu':
-            default:
-                return (
-                    <View style={styles.container}>
-                      <Text style={styles.texto}>Menú de Practicas</Text>
-                      <View style={styles.botones}>
-                      <Button color={'pink'} onPress={()=>setScreen('contador')} title='Pract:Contador'/>
-                      <Button color={'purple'} onPress={()=>setScreen('botones')} title='Pract:Botones'/>
-                      <Button color={'pink'} onPress={()=>setScreen('textimput')} title='Pract:TextImput&Alert'/>
-                      <Button color={'purple'} onPress={()=>setScreen('imagebackgroung')} title='Pract:ImageBackgroung&SlashScreen'/>
-                      <Button color={'pink'} onPress={()=>setScreen('scrollview')} title='Pract:ScrollView'/>
-                      <Button color={'purple'} onPress={()=>setScreen('activityindicator')} title='Pract:ActivityIndicator'/>
-                      <Button color={'pink'} onPress={()=>setScreen('flatlist')} title='Pract:FlatList'/>
-                      <Button color={'purple'} onPress={()=>setScreen('modalscreen')} title='Pract:Modal'/>
-                      <Button color={'pink'} onPress={()=>setScreen('bottomsheet')} title='Pract:BottonSheet'/>
-                        </View>
-                    </View>
-                  )    
-       
-
+        default:
+            return (
+                <View style={styles.container}>
+                  <Text style={styles.texto}>Menú de Practicas</Text>
+                  <ScrollView 
+                      contentContainerStyle={{ ...styles.botones, paddingRight: 10 }} 
+                      showsVerticalScrollIndicator={true}
+                  >
+                      <View style={{ marginVertical: 8, width: '100%' }}>
+                          <Button color={'pink'} onPress={()=>setScreen('contador')} title='Pract:Contador'/>
+                      </View>
+                      <View style={{ marginVertical: 8, width: '100%' }}>
+                          <Button color={'purple'} onPress={()=>setScreen('botones')} title='Pract:Botones'/>
+                      </View>
+                      <View style={{ marginVertical: 8, width: '100%' }}>
+                          <Button color={'pink'} onPress={()=>setScreen('textimput')} title='Pract:TextImput&Alert'/>
+                      </View>
+                      <View style={{ marginVertical: 8, width: '100%' }}>
+                          <Button color={'purple'} onPress={()=>setScreen('imagebackgroung')} title='Pract:ImageBackgroung&SlashScreen'/>
+                      </View>
+                      <View style={{ marginVertical: 8, width: '100%' }}>
+                          <Button color={'pink'} onPress={()=>setScreen('scrollview')} title='Pract:ScrollView'/>
+                      </View>
+                      <View style={{ marginVertical: 8, width: '100%' }}>
+                          <Button color={'purple'} onPress={()=>setScreen('activityindicator')} title='Pract:ActivityIndicator'/>
+                      </View>
+                      <View style={{ marginVertical: 8, width: '100%' }}>
+                          <Button color={'pink'} onPress={()=>setScreen('flatlist')} title='Pract:FlatList'/>
+                      </View>
+                      <View style={{ marginVertical: 8, width: '100%' }}>
+                          <Button color={'purple'} onPress={()=>setScreen('modalscreen')} title='Pract:Modal'/>
+                      </View>
+                      <View style={{ marginVertical: 8, width: '100%' }}>
+                          <Button color={'pink'} onPress={()=>setScreen('bottomsheet')} title='Pract:BottonSheet'/>
+                      </View>
+                      <View style={{ marginVertical: 8, width: '100%' }}>
+                          <Button color={'purple'} onPress={()=>setScreen('repaso')} title='Pract:Repaso'/>
+                      </View>
+                  </ScrollView>
+                </View>
+            );    
     }
-
-    return (
-      <View>
-        <Text>MenuScreen</Text>
-      </View>
-    )
-
 }
 
 const styles = StyleSheet.create({
     botones:{
         marginTop:20,
         flexDirection:'column',
-        gap:20,
         width:'80%',
-        height:'60%',
-        
-
-
+        alignItems:'center'
     },
     container: {
         flex: 1,
-        backgroundColor: 'rgba(0, 0, 0, 1)', //fondo
+        backgroundColor: 'rgba(255, 255, 255, 1)',
         alignItems: 'center',
         justifyContent: 'center',
-      },
+    },
     texto:{
         color:'rgb(0, 0, 0)',
         fontSize:55,
         fontFamily:'Times New Roman',
         fontWeight:'900',
-        fontStyle:'Montserrat',
         textDecorationLine:'underline',
     }  
 });
