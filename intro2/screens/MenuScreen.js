@@ -79,7 +79,7 @@ const styles = StyleSheet.create({
     },
     container: {
         flex: 1,
-        backgroundColor: 'rgba(255, 255, 255, 1)',
+        backgroundColor: 'rgba(200, 0, 140, 1)',
         alignItems: 'center',
         justifyContent: 'center',
     },
