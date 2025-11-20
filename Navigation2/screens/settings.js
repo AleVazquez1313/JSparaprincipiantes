@@ -6,7 +6,7 @@ export default function Settings({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.iconRow}>
-        <Ionicons name="settings-outline" size={28} color="blue" />
+        <Ionicons name="settings-outline" size={28} color="orange" />
         <Text style={styles.title}>Configuraciones de usuario</Text>
       </View>
     </View>
@@ -29,6 +29,6 @@ const styles = StyleSheet.create({
     fontSize: 22,
     fontWeight: 'bold',
     marginLeft: 10,
-    color: 'blue',
+    color: 'orange',
   },
 });
