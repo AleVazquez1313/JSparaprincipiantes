@@ -8,7 +8,7 @@ export default function Home() {
       <View style={styles.iconRow}>
         <Ionicons name="home-outline" size={28} color="red" />
       </View>
-      <Text style={styles.title}>Bienvenido a la pantalla principal</Text>
+      <Text style={styles.title}>Inicio</Text>
     </View>
   );
 }
