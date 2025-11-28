@@ -9,45 +9,39 @@ export class UsuarioController {
     async initialize() {
         await DatabaseService.initialize();
     }
+
     async ObtenerUsuarios() {
-        try {
-            const data = await DatabaseService.getAll();
-            return data.map(u => new Usuario(u.id, u.nombre, u.fecha_creacion));
-
-        }catch (error) {
-            console.error('Error al obtener usuarios:', error);
-            throw new Error('No se pudieron cargar los usuarios');
-        }
+        const data = await DatabaseService.getAll();
+        return data.map(u => new Usuario(u.id, u.nombre, u.fecha_creacion));
     }
+
     async crearUsuario(nombre) {
-  try {
+        Usuario.validar(nombre);
+        const nuevoUsuario = await DatabaseService.add(nombre.trim());
+        this.notifyListeners();
+        return new Usuario(nuevoUsuario.id, nuevoUsuario.nombre, nuevoUsuario.fecha_creacion);
+    }
 
-    Usuario.validar(nombre);
+    async actualizarUsuario(id, nuevoNombre) {
+        await DatabaseService.update(id, nuevoNombre.trim());
+        this.notifyListeners();
+    }
 
-    const nuevoUsuario = await DatabaseService.add(nombre.trim());
-
-    this.notifyListeners();
-
-    return new Usuario(
-      nuevoUsuario.id,
-      nuevoUsuario.nombre,
-      nuevoUsuario.fecha_creacion
-    );
-  } catch (error) {
-    console.error('Error al crear usuario:', error);
-    throw error;
-  }
-}
-addListener(callback) {
-  this.listeners.push(callback);
+   async eliminarUsuario(id) {
+    await DatabaseService.delete(Number(id)); 
+    this.notifyListeners(); 
 }
 
-removeListener(callback) {
-  this.listeners = this.listeners.filter(l => l !== callback);
-}
 
-notifyListeners() {
-  this.listeners.forEach(callback => callback());
-}
-    
+    addListener(callback) {
+        this.listeners.push(callback);
+    }
+
+    removeListener(callback) {
+        this.listeners = this.listeners.filter(l => l !== callback);
+    }
+
+    notifyListeners() {
+        this.listeners.forEach(callback => callback());
+    }
 }

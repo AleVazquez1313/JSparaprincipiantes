@@ -31,6 +31,7 @@ class DatabaseService {
             return await this.db.getAllAsync('SELECT * FROM usuarios ORDER BY id DESC');
         }
     }
+    //para agregarrrr
 
     async add(nombre) {
         if (Platform.OS === 'web') {
@@ -45,16 +46,48 @@ class DatabaseService {
             usuarios.unshift(nuevoUsuario);
             localStorage.setItem(this.storageKey, JSON.stringify(usuarios));
             return nuevoUsuario;
+
         } else {
             const result = await this.db.runAsync(
                 'INSERT INTO usuarios(nombre) VALUES(?)',
                 nombre
             );
+
             return {
                 id: result.lastInsertRowId,
                 nombre,
                 fecha_creacion: new Date().toISOString()
             };
+        }
+    }
+//para editar
+    async update(id, nuevoNombre) {
+        if (Platform.OS === 'web') {
+            let usuarios = await this.getAll();
+            usuarios = usuarios.map(u =>
+                u.id === id ? { ...u, nombre: nuevoNombre } : u
+            );
+            localStorage.setItem(this.storageKey, JSON.stringify(usuarios));
+
+        } else {
+            await this.db.runAsync(
+                `UPDATE usuarios SET nombre = ? WHERE id = ?`,
+                [nuevoNombre, id]
+            );
+        }
+    }
+//para eliminar
+    async delete(id) {
+        if (Platform.OS === 'web') {
+            let usuarios = await this.getAll();
+            usuarios = usuarios.filter(u => u.id !== id);
+            localStorage.setItem(this.storageKey, JSON.stringify(usuarios));
+
+        } else {
+            await this.db.runAsync(
+                `DELETE FROM usuarios WHERE id = ?`,
+                [id]
+            );
         }
     }
 }
